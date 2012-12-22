@@ -1,12 +1,22 @@
 <% @topics.each do |topic| %>
-	<div>
+	<div class="row">
+		<div class="tocpis span8">
 		<div>
-		description: <%= topic.description %>
+			<h2>
+			<span class="topic-title-label">Topic:</span><span class="topic-title-content"><%= topic.description %></span>
+			</h2>
 		</div>
-		<% topic.items.each do |item| %>
-			<div>
-			item: <%= item.content %>
-			</div>
-		<% end %>
+		<div class="items-container">
+			<% topic.items.each do |item| %>
+				<div>
+				<span class="item-label">item:</span> <span class="item-content"><%= item.content %></span>
+				</div>
+			<% end %>
+		</div>
+		</div>
+		<div class="ops span4">
+			<span class="btn btn-primary"> <%= link_to :edit, edit_topic_path(topic) %></span>
+			<span class="btn btn-danger"> <%= link_to :delete, "#" %></span>
+		</div>
 	</div>
 <% end %>
