@@ -1,13 +1,48 @@
-.navbar-inner {color: white; font-size:30px;padding-top:12px;}
-.topic-title-label {color:green;}
-.topic-title-content {color:black; padding-left: 5px}
-.items-container {margin-left: 30px}
-.item-label {font-size: 20px; color:green;}
-.item-content {font-size: 15px;padding-left: 10px}
-.ops {margin-top:40px;}
-.item_container {margin-left: 20px}
-.hints {font-size:15px; color:green;}
-.new-topic {font-size:40px; line-height: 43px;margin-top:100px;}
+.navbar-inner {
+	color: white;
+	font-size:30px;
+	padding-top:12px
+}
+.item-label, .topic-title-label {
+	color:green;
+	font-size:30px;
+	font-weight: bold;
+	width: 92px;
+	float:left
+}
+.item-content, .topic-title-content {
+	color:black;
+	font-size: 25px;
+	width: 463px;
+	float:left;
+	line-height: 25px;
+	padding-bottom: 2px
+	overflow: hidden
+}
+.items-container {
+	margin-top:10px;
+}
+.item-label {
+	font-size: 20px;
+}
+.item-content {
+	font-size: 15px;
+}
+.ops {
+	margin-top:40px;
+}
+.item_container {
+	margin-left: 20px
+}
+.hints {
+	font-size:15px;
+	color:green
+}
+.new-topic {
+	font-size:40px;
+	line-height: 43px;
+	margin-top:100px
+}
 
 form #topic_description, form .item_container input {
 	width:600px;

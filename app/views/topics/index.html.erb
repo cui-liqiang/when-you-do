@@ -1,24 +1,26 @@
 <div class="row">
 	<div class="span9">
 		<% @topics.each do |topic| %>
-				<div class="tocpis span5">
-					<div>
-						<h2>
-						<span class="topic-title-label">Topic:</span><span class="topic-title-content"><%= topic.description %></span>
-						</h2>
+			<div class="row">
+				<div class="tocpis span7">
+					<div class="row">
+						<div class="topic-title-label">Topic:</div>
+						<div class="topic-title-content"><%= topic.description %></div>
 					</div>
-					<div class="items-container">
-						<% topic.items.each do |item| %>
-							<div>
-							<span class="item-label">item:</span> <span class="item-content"><%= item.content %></span>
-							</div>
-						<% end %>
+					<div class="items-container row">
+						<div class="item-label"><div style="float:right; margin-right:8px">Items:</div></div>
+						<div class="item-content">
+							<% topic.items.each do |item| %>
+								<div><%= item.content %></div>
+							<% end %>
+						</div>
 					</div>
 				</div>
-				<div class="ops span3">
+				<div class="ops span2">
 					<span class="btn btn-primary"> <%= link_to :edit, edit_topic_path(topic) %></span>
 					<span class="btn btn-danger"> <%= link_to "delete", topic, :method => :delete %></span>
 				</div>
+			</div>
 		<% end %>
 	</div>
 	<div class="span3">
