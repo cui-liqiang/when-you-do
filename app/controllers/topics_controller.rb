@@ -1,4 +1,14 @@
 class TopicsController < ApplicationController
+	def destroy
+		@topic = Topic.find(params[:id])
+
+		@topic.items.each do |item|
+			item.delete
+		end
+		@topic.delete
+		redirect_to topics_path
+	end
+
 	def edit
 		@topic = Topic.find(params[:id])
 	end

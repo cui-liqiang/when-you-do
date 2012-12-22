@@ -16,7 +16,7 @@
 		</div>
 		<div class="ops span4">
 			<span class="btn btn-primary"> <%= link_to :edit, edit_topic_path(topic) %></span>
-			<span class="btn btn-danger"> <%= link_to :delete, "#" %></span>
+			<span class="btn btn-danger"> <%= link_to "delete", topic, :method => :delete %></span>
 		</div>
 	</div>
 <% end %>
