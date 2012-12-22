@@ -1,15 +1,16 @@
 <%= form_for @topic do |f| %>
 <%= f.label :description%>
 <%= f.text_field :description%>
+<h2>Add Items related to this topic</h2>
+<div class="hints">press enter to add a new item</div>
 <div class="item_container">
 	<% @topic.items.each do |item| %>
-		<%= label_tag "item"%>
+	<div>
 		<%= text_field_tag "items[][content]", item.content %>
 		<%= hidden_field_tag "items[][id]", item.id %>
+	</div>
 	<% end %>
-	<%= label_tag "item"%>
-	<%= text_field_tag "items[][content]"%>
+	<div><%= text_field_tag "items[][content]"%></div>
 </div>
-<%= button_tag "add a new item", :class => "add-button" %>
 <%= f.submit%>
 <% end %>

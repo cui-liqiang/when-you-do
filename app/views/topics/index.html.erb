@@ -1,22 +1,27 @@
-<% @topics.each do |topic| %>
-	<div class="row">
-		<div class="tocpis span8">
-		<div>
-			<h2>
-			<span class="topic-title-label">Topic:</span><span class="topic-title-content"><%= topic.description %></span>
-			</h2>
-		</div>
-		<div class="items-container">
-			<% topic.items.each do |item| %>
-				<div>
-				<span class="item-label">item:</span> <span class="item-content"><%= item.content %></span>
+<div class="row">
+	<div class="span9">
+		<% @topics.each do |topic| %>
+				<div class="tocpis span5">
+					<div>
+						<h2>
+						<span class="topic-title-label">Topic:</span><span class="topic-title-content"><%= topic.description %></span>
+						</h2>
+					</div>
+					<div class="items-container">
+						<% topic.items.each do |item| %>
+							<div>
+							<span class="item-label">item:</span> <span class="item-content"><%= item.content %></span>
+							</div>
+						<% end %>
+					</div>
 				</div>
-			<% end %>
-		</div>
-		</div>
-		<div class="ops span4">
-			<span class="btn btn-primary"> <%= link_to :edit, edit_topic_path(topic) %></span>
-			<span class="btn btn-danger"> <%= link_to "delete", topic, :method => :delete %></span>
-		</div>
+				<div class="ops span3">
+					<span class="btn btn-primary"> <%= link_to :edit, edit_topic_path(topic) %></span>
+					<span class="btn btn-danger"> <%= link_to "delete", topic, :method => :delete %></span>
+				</div>
+		<% end %>
 	</div>
-<% end %>
+	<div class="span3">
+		<span class="btn btn-primary new-topic"> <%= link_to "Create Topic", new_topic_path%></span>
+	</div>
+</div>

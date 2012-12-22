@@ -5,3 +5,10 @@
 .item-label {font-size: 20px; color:green;}
 .item-content {font-size: 15px;padding-left: 10px}
 .ops {margin-top:40px;}
+.item_container {margin-left: 20px}
+.hints {font-size:15px; color:green;}
+.new-topic {font-size:40px; line-height: 43px;margin-top:100px;}
+
+form #topic_description, form .item_container input {
+	width:600px;
+}

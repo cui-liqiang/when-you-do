@@ -12,4 +12,5 @@
  *= require_tree .
  */
 
-span.btn a {text-decoration: none; color:white;}
+.back-to-home a:hover, .back-to-home a, span.btn a {text-decoration: none; color:white;}
+
