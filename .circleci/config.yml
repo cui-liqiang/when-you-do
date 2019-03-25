@@ -20,7 +20,7 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      - run: touch /tmp/example-file
+      - run: echo hell > /tmp/example-file
       
       - store_artifacts:
           path: /tmp/example-file
