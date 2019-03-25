@@ -20,8 +20,12 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      - run: echo hell > /tmp/example-file
+      - run: mkdir /tmp/tmpfolder && echo hell > /tmp/tmpfolder/example-file && echo hell > /tmp/example-file
       
       - store_artifacts:
           path: /tmp/example-file
           destination: artifact-file
+      
+      - store_artifacts:
+          path: /tmp/tmpfolder/
+          destination: folder
